@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tag="8"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="424dp"
+        android:layout_height="454dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="157dp"
+        app:layout_column="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_row="2"
+        app:srcCompat="@drawable/tiktaktoe" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gameBoard"
+        android:layout_width="403dp"
+        android:layout_height="415dp"
+        android:layout_margin="20dp"
+        app:columnCount="3"
+        app:layout_column="1"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="@+id/imageView14"
+        app:layout_row="2"
+        app:rowCount="3">
+
+        <ImageView
+            android:id="@+id/tpLeft"
+            android:layout_width="132dp"
+            android:layout_height="135dp"
+            android:clickable="false"
+            android:onClick="placePiece"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:tag="0"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/ctLeft"
+            android:layout_width="137dp"
+            android:layout_height="125dp"
+            android:onClick="placePiece"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:tag="3"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/btLeft"
+            android:layout_width="137dp"
+            android:layout_height="139dp"
+            android:onClick="placePiece"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:tag="6"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/btCenter"
+            android:layout_width="127dp"
+            android:layout_height="139dp"
+            android:onClick="placePiece"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:tag="7"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/btRight"
+            android:layout_width="134dp"
+            android:layout_height="141dp"
+            android:onClick="placePiece"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:tag="8"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/ctCenter"
+            android:layout_width="130dp"
+            android:layout_height="127dp"
+            android:onClick="placePiece"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:tag="4"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/ctRight"
+            android:layout_width="136dp"
+            android:layout_height="125dp"
+            android:onClick="placePiece"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:tag="5"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/tpCenter"
+            android:layout_width="132dp"
+            android:layout_height="141dp"
+            android:onClick="placePiece"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:tag="1"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/tpRight"
+            android:layout_width="137dp"
+            android:layout_height="144dp"
+            android:onClick="placePiece"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:tag="2"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginBottom="16dp"
+        android:text="Game Over"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="6dp"
+        android:onClick="restartGame"
+        android:text="Plag Again"
+        android:visibility="invisible"
+        app:layout_column="1"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_row="2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
